@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    background-image: url(assets/ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg);
+    background-size: cover;
+    background-position-y: 11%;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 15px;
+    width: 50vh;
+    height: 70vh;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.185));
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.342);
+    
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+/* ----- input e botão  ----- */
+header{
+    width: 100%;
+    height: 15%;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+header input{
+    width: 75%;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 5px;
+
+    background-color: white;
+    border: none;
+    border-bottom: 3px solid black!important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    outline: none;
+}
+header button{
+    width: 25%;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-bottom: 3px solid black!important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    outline: none;
+    cursor: pointer;
+    transition: 300ms ease-in;
+}
+.btnDia{
+    background-color: #ffe3ce;
+}
+.btnDia:hover{
+    background-color: #ffd0ac;
+}
+.btnNoite{
+    background-color: #b2bfbf;
+}
+.btnNoite:hover{
+    background-color: #8d9c9c;
+}
+/* ----- ------ */
+
+
+/* ----- Informações da cidade ----- */
+.localizacao{
+    margin-top: 3%;
+}
+.cidade{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.data{
+    font-size: 1.2em;
+    margin: 0% 0%;
+}
+
+.temperatura{
+    font-size: 7em;
+    font-weight: bold;
+    text-shadow: 3px 3px 1px black;
+    margin: 10% 0;
+    transform: translateX(4%);
+}
+.clima{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.min-max{
+    font-size: 1.3em;
+    margin: 2% 0%;
+}
+/* ----- ----- */
+
+@keyframes surgir {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* -----laptop tela grande ----- */
+@media screen and (min-width: 1700px){
+    .container{
+        width: 700px;
+        height: 80vh;
+    }
+    header > input, header > button{
+        font-size: 2em;
+        font-weight: bold;
+        height: 60px;
+    }
+
+
+    .cidade{
+        font-size: 3em;
+    }
+    .data{
+        font-size: 2em;
+    }
+    
+    .temperatura{
+        font-size: 9em;
+        margin: 5% 0%;
+    }
+    .clima{
+        font-size: 3em;
+    }
+    .min-max{
+        font-size: 2em;
+    }
+
+}
+/* ----- telas 4k -----*/
+@media screen and (min-width: 2100px){
+    .container{
+        width: 1100px;
+        height: 85vh;
+    }
+    header > input, header > button{
+        font-size: 3.5em;
+        font-weight: normal;
+        height: 90px;
+    }
+
+    .cidade{
+        font-size: 4em;
+    }
+    .data{
+        font-size: 3em;
+    }
+    
+    .temperatura{
+        font-size: 10em;
+        margin: 2% 0%;
+    }
+    .clima{
+        font-size: 4em;
+    }
+    .min-max{
+        font-size: 3em;
+    }
+}
+
+/* ----- mobile ----- */
+@media screen and (max-width: 460px){
+    .container{
+        width: 90vw;
+    }
+    header > input, header > button{
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 380px){
+    header > input, header > button{
+        font-size: 1.1em;
+    }
+    header > input{
+        width: 65%;
+    }
+    header > button{
+        width: 35%;
+    }
+}
+@media screen and (max-width: 345px){
+    header > input, header > button{
+        font-weight: bold;
+        height: 45px;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/Oxygen-Icons.org-Oxygen-Status-weather-clouds.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>ClimaTempo</title>
+</head>
+<body>
+    <div class="container">
+        <!-- pesquisar a cidade -->
+        <header>
+            <input id="cidadeInput" type="text" autocomplete="off" placeholder="pesquisar cidade">
+            <button id="cidadeBtn" class="btnDia">enviar</button>
+        </header>
+
+        <!-- informações da cidade -->
+        <main>
+            <!-- nome da cidade e data da previsão -->
+            <section class="localizacao">
+                <div class="cidade">Escolha uma cidade</div>
+                <div class="data"></div>
+            </section>
+            <!-- temperatura, clima, mínima e máxima temperatura -->
+            <div class="climaInfo">
+                <h1 class="temperatura">0°</h1>
+                <div class="clima">Escolha uma cidade</div>
+                <p class="min-max">0°/0°</p>
+            </div>
+        </main>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
