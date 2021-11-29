@@ -3,7 +3,7 @@ window.addEventListener("load", escolherFundo);
 function escolherFundo(){ //Muda o fundo do body dependendo da hora do dia
     const hora = novaData("hora"); //pega a hora atual
     let cidadeBtn = document.getElementById("cidadeBtn");
-    console.log(hora)
+    
     if(hora >= 19 || hora <= 5){// Se estiver de noite:
         // alterar para fundo escuro
         document.querySelector("body").style.backgroundImage="url(assets/alexander-andrews-yOIT88xWkbg-unsplash.jpg)"
@@ -28,14 +28,13 @@ function pesquisarCidade(){ //Pega as informações da API
     let objeto;
     const api ={
         key: "&APPID=51e675674aff185818c305f2d99978fa",
-        base: "http://api.openweathermap.org/data/2.5/weather?q=",
+        base: "https://api.openweathermap.org/data/2.5/weather?q=",
         adicional: "&lang=PT&units=metric"
     };
     fetch(`${api.base}${cidadeInput}${api.key}${api.adicional}`).then(response=>{
         return response.json();
     }).then(response=>{
         objeto = response;
-        console.log(objeto)
 
         //anima o conteúdo do container
         carregarAnimacoes();
